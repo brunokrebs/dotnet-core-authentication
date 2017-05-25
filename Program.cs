@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 
-namespace dotnet_core_authentication
+namespace DotNetCoreAuth
 {
     public class Program
     {

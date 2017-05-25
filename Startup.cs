@@ -2,13 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using DotNetCoreAuth.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
-namespace dotnet_core_authentication
+namespace DotNetCoreAuth
 {
     public class Startup
     {
@@ -28,6 +30,7 @@ namespace dotnet_core_authentication
         public void ConfigureServices(IServiceCollection services)
         {
             // Add framework services.
+            services.AddDbContext<TodoContext>(opt => opt.UseInMemoryDatabase());
             services.AddMvc();
         }
 
