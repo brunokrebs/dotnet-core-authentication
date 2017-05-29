@@ -2,9 +2,11 @@ using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using DotNetCoreAuth.Models;
 using System.Linq;
+using Microsoft.AspNetCore.Authorization;
 
 namespace DotNetCoreAuth.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     public class TodoController : Controller
     {
